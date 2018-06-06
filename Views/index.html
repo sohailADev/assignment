@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+      <title>block chain</title>
+      <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+            </style>
+    </head>
+    <body>
+      <h1>{{ title }}</h1>
+      <table >
+        <tr>
+          <th>URL</th>
+          <th>TITLE</th>           
+        </tr>
+           {% for results  in items %}           
+                {% for url in results["results"] %}
+                <tr>
+                        <td>{{ url["url"]}} </td>
+                        <td>{{ url["title"]}}</td>
+                 </tr>
+            {% endfor %}
+        
+         {% endfor %}     
+  
+     
+    </body>
+  </html>
